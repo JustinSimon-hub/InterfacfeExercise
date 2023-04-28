@@ -3,16 +3,19 @@ namespace InterfaceExercise
 {
 	public interface IVehicle
 	{
+
+		//Creating props that all vehicles have in common
+	//Going to use the private encapsulation to ensure the best practice is in use
+public string TrunkSize {get; set;}
+public string EngineSize {get; set;}
+public string CarColor {get;set;}
+public string CarSizse {get;set;}
+	
 		
-		public string NumOfTires{get; set;}
-		public string VehicleColor {get; set;}
-		public bool TintedWindows {get; set;}
-		public bool VehicleModded {get; set;}
 	}
+	
+
+
+
 }
 
- //In your IVehicle
-            
-                /* Create 4 members that Car, Truck, & SUV all have in common.
-                 * Example: All vehicles have a number of wheels... for now..
-                 */

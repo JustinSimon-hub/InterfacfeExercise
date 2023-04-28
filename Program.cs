@@ -40,56 +40,68 @@ namespace InterfaceExercise
 
             //Now, create objects of your 3 classes and give their members values;
             //Creatively display and organize their values
-           //Instantiation of each object in the class
-           SUV suv = new SUV();
-           Truck truck = new Truck();
-           Car car = new Car();
-          
-           suv.AllWheelDrive = "Has all wheel drive";
-           suv.LargeTires = "Has large tires";
-           suv.Logo = "Chrysler";
-           suv.NumOfTires = "4 tires";
-           suv.Slogan = "We go farther";
-           suv.TintedWindows = false;
-           suv.VehicleColor = "Black";
-           suv.VehicleModded = false;
+            
 
-           truck.DrivenByHillbilly = "Driven by hillbilly";
-           truck.HasBed = "does have bed ";
-           truck.Logo = "Ford";
-           truck.NumOfTires = "3and a half";
-           truck.Slogan = "Built tough";
-           truck.TintedWindows = false;
-           truck.VehicleColor = "White";
-           truck.VehicleModded = false;
+            SUV suvobj = new SUV();
+            Car carobj = new Car();
+            Truck truckobj = new Truck();
 
-           car.Logo = "Honda";
-           car.NumOfTires = "4 tires";
-           car.Slogan = "We get you there";
-           car.TintedWindows = true;
-           car.TrunkSize = "small";
-           car.TypeOfCar = "Coupe";
-           car.VehicleColor = "grey";
-           car.VehicleModded = true;
-           //list of each object type and adds the properties to it 
-           List<Car> carlist = new List<Car> {car};
-           List<Truck> trucklist = new List<Truck>{truck};
-           List<SUV> suvlist = new List<SUV>{suv};
-           //Iterates through the list of each objecrt and adds them to a sentence in the console
-           foreach( var i in carlist)
-           {
-            Console.WriteLine($"The car is a  {car.Logo} and has {car.NumOfTires} and the slogan of the car is {car.Slogan} and the status of its tint windows is {car.TintedWindows}  with a {car.TrunkSize} trunk size and is a  {car.TypeOfCar} and  {car.VehicleColor} and is {car.VehicleModded} modded.");
-           }
-           Console.WriteLine("********************");
-           foreach(var i in trucklist)
-           {
-            Console.WriteLine($"The car is {truck.DrivenByHillbilly} and has a {truck.HasBed} and is a {truck.Logo} with {truck.NumOfTires} and the slogan of the company is {truck.Slogan}{truck.TintedWindows} and is {truck.VehicleColor} and the status of its modding is {truck.VehicleModded}.");
-           }
-           Console.WriteLine("*********************");
-           foreach(var i in suvlist)
-           {
-            Console.WriteLine($" The SUV is {suv.AllWheelDrive} and has {suv.LargeTires} and the brand is {suv.Logo} and has {suv.NumOfTires} and the company slogan is {suv.Slogan} and the tinted window is {suv.TintedWindows} and is {suv.VehicleColor} and the modding status is {suv.VehicleModded}.");
-           }
+            suvobj.CarColor = "red";
+            suvobj.CarSizse = "large";
+            suvobj.CompanyClassification = "LLC";
+            suvobj.CompanyLogo = "ram";
+            suvobj.EngineSize = "V6";
+            suvobj.SUV6Cylinder = "is 6 cylinder";
+            suvobj.SUVAllWheelDrive = "is all wheel drive";
+            suvobj.TrunkSize = "large trunk";
+
+            carobj.CarAllWheelDrive = "yes";
+            carobj.CarColor = "blue";
+            carobj.CarNumOfCylinders = "V8";
+            carobj.CarSizse = "small";
+            carobj.CompanyClassification = "sole proprietorship";
+            carobj.CompanyLogo = "honda h";
+            carobj.EngineSize = "medium";
+            carobj.TrunkSize = "small trunk";
+
+            truckobj.CarColor = "green";
+            truckobj.CarSizse = "huge";
+            truckobj.CompanyClassification = "company";
+            truckobj.CompanyLogo = "ford";
+            truckobj.EngineSize = "uniquely sized";
+            truckobj.TruckNumOfLights = "6";
+            truckobj.TruckRearWheelDrive = "rear wheel drive";
+            truckobj.TrunkSize = "has bed";
+
+
+            List<SUV> listofsuv = new List<SUV>();
+            listofsuv.Add(suvobj);
+            List<Car> listofcar = new List<Car>();
+            listofcar.Add(carobj);
+            List<Truck> listoftruck = new List<Truck>();
+            listoftruck.Add(truckobj);
+
+
+            
+
+            foreach(var car in listofsuv)
+            {
+                Console.WriteLine("------------------");
+                Console.WriteLine($"{car.CarColor},{car.CarSizse},{car.EngineSize},{car.CompanyClassification},{car.CompanyLogo},{car.EngineSize},{car.SUV6Cylinder},{car.SUVAllWheelDrive},{car.TrunkSize}");
+            }
+            foreach(var car in listofcar)
+            {
+                Console.WriteLine("------------------");
+                Console.WriteLine($"{car.CarColor},{car.CarSizse},{car.EngineSize},{car.CompanyClassification},{car.CompanyLogo},{car.EngineSize},{car.CarNumOfCylinders},{car.CarAllWheelDrive},{car.TrunkSize}");
+            }
+            foreach(var car in listoftruck)
+            {
+                Console.WriteLine("------------------");
+                Console.WriteLine($"{car.CarColor},{car.CarSizse},{car.EngineSize},{car.CompanyClassification},{car.CompanyLogo},{car.EngineSize},{car.TruckNumOfLights},{car.TruckRearWheelDrive},{car.TrunkSize}");
+            }
+
+
+
 
         }
     }

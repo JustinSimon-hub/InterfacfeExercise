@@ -1,21 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 namespace InterfaceExercise
 {
-	public class Truck : ICompany, IVehicle
+	public class Truck : ICompany , IVehicle
 	{
-	public string DrivenByHillbilly {get; set;}
-	public string HasBed {get; set;}
-
-	public string NumOfTires{get; set;}
-		public string VehicleColor {get; set;}
-		public bool TintedWindows {get; set;}
-		public bool VehicleModded {get; set;}
-
-		public string Logo {get; set;}
-		public string Slogan {get; set;}
-
-		
-	}
+		public Truck()
+		{
+		}
+		public string TruckNumOfLights {get; set;}
+		public string TruckRearWheelDrive {get; set;}
+        public string CompanyClassification { get;set; }
+        public string CompanyLogo { get;set;}
+        public string TrunkSize { get;set;}
+        public string EngineSize {get ;set; }
+        public string CarColor { get;set; }
+        public string CarSizse { get;set; }
+    }
 }
 

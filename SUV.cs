@@ -1,20 +1,19 @@
 ﻿using System;
 namespace InterfaceExercise
 {
-	public class SUV : ICompany, IVehicle
+	public class SUV : ICompany , IVehicle
 	{
-		public string AllWheelDrive {get; set;}
-		public string LargeTires {get; set;}
-
-		public string NumOfTires{get; set;}
-		public string VehicleColor {get; set;}
-		public bool TintedWindows {get; set;}
-		public bool VehicleModded {get; set;}
-
-		public string Logo {get; set;}
-		public string Slogan {get; set;}
-	}
-
-	}
-
+		public SUV()
+		{
+		}
+		public string SUVAllWheelDrive {get; set;}
+		public string SUV6Cylinder {get; set;}
+        public string CompanyClassification {get;set;  }
+        public string CompanyLogo {  get;set;}
+        public string TrunkSize { get;set; }
+        public string EngineSize { get;set; }
+        public string CarColor { get;set;}
+        public string CarSizse { get;set; }
+    }
+}
 
